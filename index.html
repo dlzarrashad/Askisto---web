@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askiston Autokorjaamo & Rengashotelli</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        /* Top Bar */
+        .top-bar {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+        }
+        .top-bar span { color: #ffcc00; font-weight: bold; }
+        
+        /* Banner */
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #ffcc00;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 4px solid #ffcc00;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px #000;
+            word-wrap: break-word;
+        }
+        header p {
+            font-size: 1.3em;
+            color: #ddd;
+            max-width: 600px;
+            margin: 20px auto 0 auto;
+        }
+        
+        /* Main Container */
+        .container {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        
+        /* About & Hours Section */
+        .info-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .info-box {
+            background-color: #222;
+            padding: 25px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 300px;
+            border-left: 4px solid #ffcc00;
+        }
+        .info-box h3 { color: #ffcc00; margin-top: 0; }
+        
+        /* Services */
+        .section-title { text-align: center; font-size: 2.2em; margin-bottom: 30px; }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service-box {
+            background-color: #2a2a2a;
+            padding: 30px;
+            flex: 1;
+            min-width: 280px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #444;
+            transition: transform 0.3s;
+        }
+        .service-box:hover { border-color: #ffcc00; transform: translateY(-5px); }
+        .service-box h3 { color: #fff; font-size: 1.5em; }
+        
+        /* Premium Tire Hotel Box */
+        .premium-box {
+            border: 2px solid #ffcc00;
+            background-color: #2b2400;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.2);
+        }
+        .premium-box h3 { color: #ffcc00; }
+        .price-tag {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffcc00;
+            margin: 10px 0;
+        }
+        
+        /* Contact & Map Section */
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 60px;
+            background-color: #222;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .contact-details { flex: 1; min-width: 300px; }
+        .contact-details h3 { color: #ffcc00; font-size: 1.8em; }
+        .contact-details p { font-size: 1.2em; margin: 15px 0; }
+        .contact-details span { color: #ffcc00; font-weight: bold; }
+        
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #444;
+        }
+        iframe { width: 100%; height: 100%; min-height: 250px; border: 0; }
+        
+        /* Booking Button */
+        .book-btn {
+            display: block;
+            background-color: #ffcc00;
+            color: #1a1a1a;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 50px;
+            transition: background 0.3s;
+        }
+        .book-btn:hover { background-color: #e6b800; }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        /* 📱 Mobile Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2em; }
+            header p { font-size: 1.1em; }
+            .price-tag { font-size: 2.5em; }
+        }
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        🇫🇮 <span>Palvelumme on suomeksi</span> | 100% Paikallinen Yritys Vantaalla
+    </div>
+
+    <header>
+        <h1>Askiston Autokorjaamo</h1>
+        <p>Ammattitaitoista huoltoa ja Vantaan luotettavin rengashotelli.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="info-grid">
+            <div class="info-box">
+                <h3>Tietoa Meistä</h3>
+                <p>Olemme kokeneita ja sertifioituja ammattilaisia. Teemme työmme aina tarkasti, huolellisesti ja asiakasta kuunnellen. Autosi on meillä turvallisissa käsissä.</p>
+            </div>
+            <div class="info-box">
+                <h3>🕒 Aukioloajat</h3>
+                <p><strong>Arkisin:</strong> 09:00 - 18:00</p>
+                <p><strong>Viikonloppuisin:</strong> 10:00 - 18:00</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Palvelumme</h2>
+        
+        <div class="services">
+            <div class="service-box">
+                <h3>🚗 Autokorjaamo</h3>
+                <p>Kattavat huollot ja korjaukset kaikille merkeille. Moottoriviat, jarrutyöt ja öljynvaihdot ammattitaidolla.</p>
+            </div>
+            
+            <div class="service-box premium-box">
+                <h3>🏨 Rengashotelli</h3>
+                <p>Säilytä renkaasi turvallisesti oikeissa olosuhteissa. Sisältää tarkastuksen.</p>
+                <div class="price-tag">65€ <span style="font-size: 0.4em; color: #fff;">/ Kausi</span></div>
+                <p>Tuo renkaasi meille, me hoidamme loput!</p>
+            </div>
+
+            <div class="service-box">
+                <h3>⚙️ Renkaanvaihto</h3>
+                <p>Nopea ja turvallinen renkaanvaihto odottaessa. Teemme myös tasapainotukset laadukkailla laitteilla.</p>
+            </div>
+        </div>
+
+        <a href="https://wa.me/358458618133?text=Hei!%20Haluaisin%20varata%20ajan.%20Milloin%20teill%C3%A4%20olisi%20seuraava%20vapaa%20aika%3F" target="_blank" class="book-btn">
+            📅 Varaa Aika (WhatsApp)
+        </a>
+
+        <div class="contact-section">
+            <div class="contact-details">
+                <h3>Yhteystiedot</h3>
+                <p>Ota yhteyttä tai tule käymään paikan päällä!</p>
+                <p><span>Puh:</span> <a href="tel:0458618133" style="color:#fff; text-decoration:none;">045 861 8133</a></p>
+                <p><span>S-posti:</span> <a href="mailto:Raveldlshad5@gmail.com" style="color:#fff; text-decoration:none;">Raveldlshad5@gmail.com</a></p>
+                <p><span>Osoite:</span> Timmermalmintie 19 B, 01680 Vantaa</p>
+            </div>
+            <div class="map-container">
+                <iframe src="http://googleusercontent.com/maps.google.com/4" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Askiston Autokorjaamo. Kaikki oikeudet pidätetään.
+    </footer>
+
+</body>
+</html>
